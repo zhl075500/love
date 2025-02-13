@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给最爱的你</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        img {
+            border-radius: 10px;
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            margin: 50px auto;
+            animation: heartbeat 1.5s infinite;
+        }
+        .heart::before, .heart::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1) rotate(-45deg); }
+            50% { transform: scale(1.1) rotate(-45deg); }
+        }
+        .qr-code {
+            margin: 20px 0;
+        }
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>亲爱的[许闻珊]：</h1>
+    <p>遇见你是我生命中最美好的事情 ❤️</p>
+    <p>每一天和你在一起，都让我感到无比幸福。</p>
+    <p>愿我们的未来充满爱与欢笑！</p>
+    <img src="your-photo.jpg" alt="我们的照片">
+
+    <!-- 动态爱心 -->
+    <div class="heart"></div>
+
+    <!-- 二维码情书 -->
+    <div class="qr-code">
+        <p>扫描二维码，查看我的秘密情书：</p>
+        <img src="love_qr_code.png" alt="二维码">
+    </div>
+
+    <!-- 背景音乐 -->
+    <audio autoplay loop>
+        <source src="your-music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <!-- 点击互动 -->
+    <script>
+        document.body.addEventListener('click', function() {
+            alert("我爱你！");
+        });
+    </script>
+</body>
+</html>
